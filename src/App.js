@@ -1,39 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import { Breadcrumbs, Link, Typography } from "@mui/material";
 import './App.css';
+import WarehouseTable from "./components/WarehouseTable";
 
 function App() {
-  const [data, setData] = useState(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
-
-  useEffect(() => {
-    const url = `${process.env.REACT_APP_API_URL}`
-    fetch(url)
-      .then((response) => {
-      if (response.ok) {
-        return response.json()
-      }
-      throw response
-    })
-    .then((data) => {
-      setData(data)
-    })
-    .catch((error) => {
-      console.error("Error fetching data: ", error)
-      setError(error)
-    })
-    .finally(() => {
-      setLoading(false)
-    })
-  }, [])
-
-  if (loading) return "Loading . . . "
-  if (error) return "Error!"
-
-  console.log(data)
+  
   return (
     <div className="App">
-
+      <Breadcrumbs aria-label="breadcrumb">
+        <Link underline="hover" color="inherit" href="/">
+        MUI
+        </Link>
+        <Link
+        underline="hover"
+        color="inherit"
+        href="/getting-started/installation/"
+        >
+        Core
+        </Link>
+        <Typography color="text.primary">Breadcrumbs</Typography>
+      </Breadcrumbs>
+      <WarehouseTable />
     </div>
   );
 }
