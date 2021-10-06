@@ -3,7 +3,6 @@ import './App.css';
 import WarehouseTable from "./components/WarehouseTable";
 
 function App() {
-  
   return (
     <div className="App">
       <Breadcrumbs aria-label="breadcrumb">
