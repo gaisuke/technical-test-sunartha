@@ -18,7 +18,7 @@ const WarehouseDetailTable = () => {
     const [error, setError] = useState(null)
 
     useEffect(() => {
-        const url = `${process.env.REACT_APP_API_URL}/${params.WarehouseID}`
+        const url = `http://52.163.51.143:40020/api/WarehouseReps/${params.WarehouseID}`
         fetch(url)
             .then((response) => {
             if (response.ok) {
