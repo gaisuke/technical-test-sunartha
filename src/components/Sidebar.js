@@ -1,15 +1,21 @@
 import React from 'react'
-import { List, ListItem, ListItemText, Drawer } from '@mui/material'
+import { Icon } from '@mui/material'
 
 const Sidebar = () => {
     return (
-        <Drawer>
-            <List>
-                <ListItem>
-                    <ListItemText primary="Test SM Warehouse"/>
-                </ListItem>
-            </List>
-        </Drawer>
+        <div className="sidebar">
+            <div className="logo">
+                <Icon>layers</Icon>
+                <p className="logo-name">TEST</p>
+            </div>
+            <div className="side-menu">
+                <p className="menu-label">Test Menu</p>
+                <div className="menu-item">
+                    <Icon sx={{fontSize: 18}}>tune</Icon>
+                    <p className="menu-label">Test SM Warehouse</p>
+                </div>
+            </div>
+        </div>
     )
 }
 

@@ -1,6 +1,54 @@
-.App {
-  text-align: center;
+.w-full {
+  width: 100%;
+}
+
+.margin-custom {
+  margin: 40px;
+}
+
+.sidebar {
+  width: 20%;
+  background-color: #1f2937;
+  color: aliceblue;
+}
+
+.logo {
+  padding: 8px;
+  height: 50px;
+  background-color: #374151;
   display: flex;
+  align-items: center;
+}
+
+.logo-name {
+  font-size: larger;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.menu-label {
+  font-size: small;
+  margin: 0 0;
+  padding-left: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.menu-item {
+  padding: 8px;
+  background-color: #111827;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-label {
+  margin-left: 6px;
+}
+
+.App {
+  display: flex;
+  height: 100vh;
 }
 
 .App-logo {
@@ -27,11 +75,6 @@
 
 .App-link {
   color: #61dafb;
-}
-
-.warehouse-index {
-  width: 100%;
-  margin-left: 250 !important;
 }
 
 @keyframes App-logo-spin {
