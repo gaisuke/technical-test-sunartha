@@ -1,25 +1,24 @@
-import { Breadcrumbs, Link, Typography } from "@mui/material";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Box } from '@mui/material'
+import WarehouseIndex from './pages/WarehouseIndex'
+import WarehouseDetail from './pages/WarehouseDetail'
+import Sidebar from './components/Sidebar'
 import './App.css';
-import WarehouseTable from "./components/WarehouseTable";
+
+const NoMatchRoute = () => <div>404 Page</div>
 
 function App() {
   return (
-    <div className="App">
-      <Breadcrumbs aria-label="breadcrumb">
-        <Link underline="hover" color="inherit" href="/">
-        MUI
-        </Link>
-        <Link
-        underline="hover"
-        color="inherit"
-        href="/getting-started/installation/"
-        >
-        Core
-        </Link>
-        <Typography color="text.primary">Breadcrumbs</Typography>
-      </Breadcrumbs>
-      <WarehouseTable />
-    </div>
+    <Router>
+      {/* <Box className="App"> */}
+        <Sidebar />
+        <Switch>
+          <Route path ="/" exact component={WarehouseIndex} />
+          <Route path ="/:WarehouseID" render={(props) => <WarehouseDetail {...props} />} />
+          <Route component={NoMatchRoute} />
+        </Switch>
+      {/* </Box> */}
+    </Router>
   );
 }
 

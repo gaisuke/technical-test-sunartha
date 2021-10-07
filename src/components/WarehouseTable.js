@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { DataGrid } from '@mui/x-data-grid';
-import Link from "@material-ui/core/Link";
+import React, { useState, useEffect } from 'react'
+import { DataGrid } from '@mui/x-data-grid'
+import { Link } from 'react-router-dom'
 
 const columns = [
     {
@@ -8,7 +8,7 @@ const columns = [
         headerName: 'ID',
         width: 200,
         renderCell: (params) => (
-            <Link href={`/${params.value}`}>{params.value}</Link>
+            <Link to={`/${params.value}`}>{params.value}</Link>
         )
     },
     {field: 'Branch', headerName: 'Branch', width: 200},

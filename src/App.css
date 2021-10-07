@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  display: flex;
 }
 
 .App-logo {
@@ -26,6 +27,11 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.warehouse-index {
+  width: 100%;
+  margin-left: 250 !important;
 }
 
 @keyframes App-logo-spin {
